@@ -1,0 +1,686 @@
+/* nustato kad butu visose narsyklese visi elementai butu be default margin ir padding, tik margin iš šonu */
+/* ypac jeigu naudoji kazkokia biblioteka taip daryt visada */
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+/* paklausti del border-box box-sizing */
+
+/* GLOBAL STYLE RULES start */
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:focus {
+    color: #3aa9b2;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.dream-home {
+    color: #b5b8bd;
+}
+
+/* GLOBAL end */
+
+/* SECTION "hero" start */
+
+html, body {
+    margin: 0 auto;
+    /* background: red; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    background-color: #3e6fce;
+    z-index: 998;
+}
+
+nav .wrapper {
+    width: 1024px;
+    /* width: 1280px;  */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    /* line-height: 80px; */
+}
+
+nav .logo img {
+    /* color: white;
+    font-size: 50px; */
+    max-width: 100px;
+    width: 100%;
+}
+
+nav .links {
+    flex: 1 1 auto;
+}
+
+nav .links ul {
+    list-style-type: none;
+    display: flex;
+    width: 500px;
+}
+
+nav .links ul li {
+    color: white;
+}
+
+.call-to-action a {
+    border-radius: 30px;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    background-color: #3e6fce;
+}
+
+.call-to-action a::before {
+    content: '';
+    border-radius: 30px;
+    width: 190px;
+    height: 45px;
+    z-index: -99;
+    position: absolute;
+    background: linear-gradient(to right, #4881ec, #31f796);
+}
+
+.call-to-action span {
+    margin-right: 10px;
+}
+
+section.hero {
+    /* del to kad fixed, nes uzdengia, bet tai reikia daryt tik sekanciam divui po fixed divo */
+    margin-top: 80px;
+    /* background-color: brown; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 34.25%;
+    position: relative;
+}
+
+section .container.absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+section .container.absolute p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+section .container.absolute h1 {
+    font-size: 56px;
+}
+
+section .container.absolute h3 {
+    margin-bottom: 100px;
+    font-size: 36px;
+}
+
+section .info-bar {
+    background: linear-gradient(to right, #4881ec, #31f796);
+    width: fit-content;
+    margin: 5px 0px 10px 0px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+section .info-bar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+section .info-bar ul li {
+    margin: 0px 30px 0px 0px;
+    display: flex;
+}
+
+section .info-bar span {
+    margin-right: 8px;
+}
+
+section .info-bar ul li:last-child {
+    margin: 0px 30px 0px 0px;
+}
+
+.search {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.search form {
+    display: flex;
+    background-color: white;
+    border-radius: 30px;
+    width: 864px;
+    margin-left: 0px;
+}
+
+.search div {
+    flex: 1 1 auto;
+}
+
+.search select {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    border-left: 1px solid #ccc;
+} 
+
+.search .rent select {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.search .rooms-2 select {
+    border-right: none;
+}
+
+.search button {
+    width: 200px;
+    padding: 16px 10px;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right, #4881ec, #31f796);
+    /* margin-left: -30px; */
+    color: white;
+    position: absolute;
+}
+
+/* SECTION "hero" end */
+
+
+/* SECTION "main" start */
+
+section .recent-properties {
+    display: flex;
+    align-items: center;
+    margin: 80px 0px 40px 0px;
+}
+
+section .spacer {
+    flex: 1 1 auto;
+}
+
+section .choices {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* section .choice-image {
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 250px;
+} */
+
+/* jeigu be height pvz, galima taip - geriau vel su relative-absolute ir padding-top (aspect ratio), cia nuotraukoms */
+section .choice-image {
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 330px;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+section .all-choices {
+    margin: 0;
+}
+
+section .choice-info-footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+}
+
+section .choice-info-footer ul li {
+    display: flex;
+    align-items: center;
+}
+
+section .choice-info-footer span {
+    margin-right: 8px;
+}
+
+section .choice-info {
+    text-align: center;
+    background: #eff2f7;
+    padding: 25px 0px;
+    font-family: Calibri;
+}
+
+section .choice-info p {
+    color: #b5b8bd;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+section .choice-info h3 {
+    font-weight: 500;
+    margin-bottom: 13px;
+}
+
+section .choice-info h4 {
+    color:#5677b5;
+}
+
+section .choice-info-footer ul li {
+    margin: 0;
+}
+
+section .see-more {
+    text-align: center;
+    padding: 45px 0px 70px 0px;
+}
+
+section .see-more-button {
+    width: 130px;
+    padding: 16px 10px;
+    border-radius: 30px;
+    border: none;
+    background-image: linear-gradient(to right, #4881ec, #31f796);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+/* SECTION "main" end */
+
+
+/* SECTION "properties" start */
+
+.properties {
+    background-color: #eff2f7;
+    width: 100%;
+}
+
+section .properties-text {
+    padding-top: 70px;
+}
+
+section .properties-text h2 {
+    margin-bottom: 5px;
+}
+
+section .properties-images-background {
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+section .properties-images {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; */
+    padding: 20px 0px 80px 0px;
+}
+
+section .images-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 0px 0px 0px;
+}
+
+/* SECTION "main" end  */
+
+
+/* SECTION "opinion" start */
+
+section .reviews-text {
+    margin: 80px 0px 80px 0px;
+}
+
+section .people-reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+section .figure {
+    margin-top: 10px;
+}
+
+section figure img {
+    border-radius: 50%;
+    width: 50px;
+    margin: 20px 0px;
+}
+
+section figcaption {
+    color: #4881ec;
+    margin-bottom: 5px;
+}
+
+section figcaption span {
+    color: #878a8f;
+}
+
+section .all-people-reviews {
+    width: 320px;
+    margin: 0;
+}
+
+section .all-people-reviews-text {
+    height: 170px;
+}
+
+section .all-people-reviews-text h3 {
+    margin-bottom: 25px;
+}
+
+section .all-people-reviews-text p {
+    color: #878a8f;
+}
+
+section .rating span {
+    font-size: 12px;
+    color: rgb(255, 174, 0);
+}
+
+/* SECTION "opinion" end */
+
+
+/* SECTION "bottom-hero" start */
+
+/* 1 budas */
+/* section.bottom-hero {
+    background: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+} */
+
+/* 2 budas */
+.bottom-hero {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20%;
+    position: relative;
+}
+
+section .container.absolute1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section .hero-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+section .hero-inner-text, .hero-inner-subscribe {
+    margin: 0;
+}
+
+section .hero-inner-text {
+    color: white;
+}
+
+.hero-inner-subscribe form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.subscribe-button {
+    position: absolute;
+    left: 500px;
+}
+
+.subscribe-button button {
+    width: 200px;
+    padding: 25px 10px;
+    border-radius: 40px;
+    border: none;
+    background-image: linear-gradient(to right, #4881ec, #31f796);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.your-email input {
+    padding: 25px 50px;
+    border: none;
+    background: white;
+    border-radius: 40px;
+    width: 700px;
+}
+
+.your-email input::placeholder {
+    font-style: italic;
+}
+
+/* SECTION "bottom-hero" end */
+
+
+/* SECTION "pre-footer" start */
+
+.pre-footer {
+    background-color: #3e6fce;
+    padding-bottom: 60px;
+}
+
+section .pre-footer-logo {
+    padding: 70px 0px 33px 0px;
+}
+
+section .pre-footer-logo img {
+    width: 160px;
+}
+
+section .container.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+section .logo-text {
+    flex: 30%;
+}
+
+section .latest-properties-wrapper {
+    flex: 70%;
+}
+
+section .logo-text p {
+    font-style: italic;
+    color: white;
+}
+
+section .latest-properties-wrapper h2 {
+    color: white;
+    padding-top: 104px;
+    padding-bottom: 45px;
+    font-size: 1.1em;
+}
+
+section .latest-properties {
+    display: flex;
+    flex-direction: row;
+}
+
+section .latest-property {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+section .latest-properties-image {
+    background-color: gray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 85px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+
+section .latest-properties-text {
+    color: white;
+    margin-right: 40px;
+}
+
+#property-3 {
+    margin-right: 0;
+}
+
+section .latest-properties-text h4 {
+    color: rgb(0, 211, 0);
+}
+
+section .latest-properties-text h3 {
+    font-size: 15px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/* SECTION "pre-footer" end */
+
+
+/* SECTION "footer" start */
+
+footer {
+    padding: 30px 0px 150px 0px;
+}
+
+footer .container.footer-flex {
+    display: flex;
+    flex-direction: row;
+    color: #878a8f;
+}
+
+.spacer-1, .spacer-2 {
+    flex: 1 1 auto;
+}
+
+.copyright {
+    width: 450px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+}
+
+.footer-nav li {
+    margin: 0px 40px 0px 0px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #878a8f;
+}
+
+.call-us {
+    width: 130px;
+}
+
+.call-us h4 {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.call-us span {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1050px) {
+    nav .wrapper {
+        width: 800px;
+    }
+
+    .search form {
+        width: 640px;
+    }
+
+    .search {
+        width: 640px;
+    }
+
+    .search button {
+        width: 151px;
+        position: static;
+        margin-left: 0px;
+    }
+
+    section .container.absolute h3 {
+        margin-bottom: 50px;
+        font-size: 26px;
+    }
+
+    section .container.absolute p, h1, h3 {
+        margin-left: 60px;
+    }
+
+    section .container.absolute h1 {
+        font-size: 46px;
+    }
+
+    section .info-bar {
+        margin-left: 60px;
+    }
+
+    section .recent-properties {
+        margin: 80px 0px 20px 0px;
+    }
+
+    section .choices {
+        justify-content: space-evenly;
+    }
+
+    section .all-choices {
+        margin-top: 40px;
+    }
+
+    section .spacer {
+        width: 400px;
+        flex: none;
+    }
+}
